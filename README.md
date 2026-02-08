@@ -37,26 +37,8 @@ The system is built with a **Security-First** architecture, featuring an Edge Ga
 
 ## 🏗️ Architecture
 
-```mermaid
-graph LR
-    User[User / Client] -->|HTTPS| Edge[🛡️ Edge Gateway (Cloudflare)]
-    Edge -->|Authenticated| API[🐍 Backend API (FastAPI)]
-    
-    subgraph "Core Engine"
-        API --> Video[🎥 Video Processor]
-        API --> Audio[🔊 Audio Processor]
-        
-        Video -->|Frames| VisualModel[🧠 Visual Model (EfficientNet)]
-        Audio -->|MFCC| AudioModel[🧠 Audio Model (CNN)]
-        
-        VisualModel --> Fusion[⚗️ Fusion Logic]
-        AudioModel --> Fusion
-    end
-    
-    Fusion -->|Verdict| API
-    API -->|JSON Result| Edge
-    Edge -->|Response| User
-```
+<img width="3961" height="3080" alt="sherlock_flow" src="https://github.com/user-attachments/assets/87f30ea0-ba80-45ed-9196-193b2bf586a3" />
+
 
 ## 🛠️ Technology Stack
 
