@@ -1,0 +1,15 @@
+name = "sherlock-gateway"
+main = "src/index.ts"
+compatibility_date = "2023-10-25"
+
+# Variable bindings
+[vars]
+# The URL of your Python Backend (e.g., ngrok URL or deployed server IP)
+# For local wrangler dev, this can be http://127.0.0.1:8000
+BACKEND_URL = "http://127.0.0.1:8000"
+
+# Secrets (Set these via `wrangler secret put API_KEY`)
+# API_KEY = "your-secure-api-key"
+
+
+
